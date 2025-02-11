@@ -1,0 +1,32 @@
+services: 
+  mysql:
+    image: 'bitnami/mysql:latest'
+    ports: 
+      - '3306:3306'
+    environment: 
+      - ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_MASTER_PORT_NUMBER=3306
+    restart: unless-stopped
+    volumes:
+      - 'mysql_data:/bitnami/mysql/data'
+  springboot:
+    image: projectidb:110225
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+
+  apache:
+    build: phpDockerFile
+    ports:
+      - '80:80'
+    volumes:
+      - './phpfile:/var/www/html'
+    restart: unless-stopped
+
+volumes:
+  mysql_data:
+  mongodb_data:
+
+
+  

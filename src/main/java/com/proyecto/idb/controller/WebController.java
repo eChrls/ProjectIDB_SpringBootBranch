@@ -60,6 +60,7 @@ public class WebController {
     }
 
     @DeleteMapping("/-alu/{idAlumn}")
+    @CrossOrigin(origins = "https://idbproject.netlify.app/table.html")
     public ResponseEntity<String>delAlumn(@PathVariable Long idAlumn){
         return webService.deleteByIdAlumn(idAlumn);
     }    

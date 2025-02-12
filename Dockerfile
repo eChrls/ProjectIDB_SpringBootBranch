@@ -6,4 +6,4 @@ FROM amazoncorretto:21-alpine-jdk
 COPY --from=build /target/idb-0.0.1-SNAPSHOT.jar idb.jar
 EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","-Dspring.profiles.active=dev","/idb.jar", "org.springframework.boot.loader.launch.JarLauncher"]
+ENTRYPOINT ["java","-jar","-Dspring.profiles.active=pro","/idb.jar", "org.springframework.boot.loader.launch.JarLauncher"]

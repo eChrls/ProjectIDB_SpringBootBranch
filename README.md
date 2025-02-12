@@ -72,11 +72,12 @@ La aplicación PHP proporciona una interfaz web sencilla para el inicio de sesi�
 *   Consulte los registros de los contenedores Docker para solucionar cualquier problema durante el proceso de despliegue.
 *   La anotación `@CrossOrigin("https://idbproject.netlify.app")` en `WebController.java` permite las peticiones de origen cruzado desde ese origen específico. Asegúrese de que esto esté configurado correctamente para el dominio de su frontend. La anotación `@CrossOrigin` en el método `delAlumn` no está cerrada correctamente, debería ser `@CrossOrigin(origins = "https://idbproject.netlify.app/table.html")`.
 
-### Despliegue de la Página Web
+### Despliegue de la Página Web (Con activación previa del servidor en render)
 
 La página web (frontend) de este proyecto se encuentra en el repositorio [ProjectIDB-JS-](https://github.com/eChrls/ProjectIDB-JS-.git). Allí encontrará el código HTML, CSS y JavaScript necesarios para desplegar la interfaz de usuario.
+NOTA: requiere activación previa de servidor render desde la cuenta admin (https://dashboard.render.com/).
 
-### Despliegue con PHP
+### Despliegue con PHP (sin servidor render)
 
 Este repositorio incluye el código necesario para desplegar la aplicación PHP. El archivo `docker-compose.yml` debe estar configurado para incluir un servidor PHP (por ejemplo, utilizando una imagen de PHP-FPM) y servir los archivos PHP desde el directorio apropiado. Si no lo ha hecho ya, asegúrese de que su `docker-compose.yml` contiene la configuración necesaria para el servidor PHP.
 

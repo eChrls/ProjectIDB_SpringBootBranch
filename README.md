@@ -1,4 +1,4 @@
-## README: Despliegue de Base de Datos, Spring Boot y PHP con Docker
+## Despliegue de Base de Datos, Spring Boot y PHP con Docker
 
 Esta guía describe los pasos para desplegar una base de datos MySQL, una aplicación Spring Boot y una aplicación PHP utilizando Docker. Se asume que tiene Docker instalado en su sistema.
 

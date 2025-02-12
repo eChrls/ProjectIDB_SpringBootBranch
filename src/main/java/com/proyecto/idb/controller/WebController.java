@@ -30,7 +30,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @RestController //para hacer las llamadas a la api y generar una respuesta por el body
 @Slf4j //para poner logs
-@CrossOrigin("*") //para que se pueda llamar desde cualquier sitio
+@CrossOrigin("https://idbproject.netlify.app") //para que se pueda llamar desde cualquier sitio
 @RequiredArgsConstructor //para que se inyecten los beans
 @RequestMapping("/idbProject") //mapeo de la url que aparecerá cuando se haga la llamada
 public class WebController {
